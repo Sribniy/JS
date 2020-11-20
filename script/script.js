@@ -4,7 +4,7 @@ let addExpenses = 'Интернет, такси, коммуналка';
 let deposit = false;
 let mission = 1000;
 let period = 9;
-let budgetDay = 500;
+let budgetDay = 700;
 
 
 console.log(typeof money);
