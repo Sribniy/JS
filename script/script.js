@@ -1,10 +1,10 @@
-let money = 100;
+let money = 300;
 let income = 'Фриланс';
 let addExpenses = 'Интернет, такси, коммуналка';
 let deposit = false;
 let mission = 1000;
 let period = 9;
-let budgetDay = 700;
+let budgetDay = money / 30;
 
 
 console.log(typeof money);
