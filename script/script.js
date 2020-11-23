@@ -9,7 +9,8 @@ let expenses2 = prompt( 'Введите обязательную статью р
 let amount2 = prompt ('Во сколько это обойдется?');
 let budgetMonth = money - (Number(amount1) + Number(amount2));
 let tar = parseInt(mission / budgetMonth);
-let budgetDay = parseInt(budgetMonth / 30);
+let budgetDay = Math.ceil(budgetMonth / 30);
+
 
 console.log(typeof money);
 console.log(typeof income);
@@ -25,6 +26,24 @@ console.log(budgetMonth);
 console.log('Ваша цель будет достигнута через: ' + tar + ' месяцев');
 console.log(budgetDay);
 console.log(addExpenses.length);
+console.log('Ваш бюджет на день ' + budgetDay + ' рублей');
+
+
+let n;
+if (budgetDay >=1200){
+    console.log('У вас высокий уровень дохода');
+}else if (budgetDay <1199) {
+    console.log('У вас средний уровень дохода');
+}else if (budgetDay >600) {
+    console.log('У вас средний уровень дохода');   
+}else if (budgetDay <=600) {
+    console.log('К сожалению у вас уровень дохода ниже среднего');
+}else if (budgetDay >0) {
+    console.log('К сожалению у вас уровень дохода ниже среднего');   
+}else if (budgetDay < 0) {
+    console.log('Что то пошло не так');
+}
+
 /*;
 
 let deposit = false;
