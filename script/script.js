@@ -2,7 +2,7 @@ let mission = 1000;
 let income = 'Фриланс'
 let money = prompt('Ваш месячный доход?');
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-let deposit = prompt ('Есть ли у вас депозит в банке?');
+let deposit = confirm ('Есть ли у вас депозит в банке?');
 let expenses1 = prompt( 'Введите обязательную статью расходов?');
 let amount1 = prompt ('Во сколько это обойдется?');
 let expenses2 = prompt( 'Введите обязательную статью расходов?');
@@ -14,7 +14,7 @@ let budgetDay = Math.ceil(budgetMonth / 30);
 
 console.log(typeof money);
 console.log(typeof income);
-console.log(Boolean(deposit));
+console.log(deposit);
 console.log(money);
 console.log(addExpenses);
 
@@ -29,17 +29,12 @@ console.log(addExpenses.length);
 console.log('Ваш бюджет на день ' + budgetDay + ' рублей');
 
 
-let n;
 if (budgetDay >=1200){
-    console.log('У вас высокий уровень дохода');
-}else if (budgetDay <1199) {
-    console.log('У вас средний уровень дохода');
-}else if (budgetDay >600) {
-    console.log('У вас средний уровень дохода');   
-}else if (budgetDay <=600) {
-    console.log('К сожалению у вас уровень дохода ниже среднего');
-}else if (budgetDay >0) {
-    console.log('К сожалению у вас уровень дохода ниже среднего');   
+    console.log('У вас высокий уровень дохода!');
+}else if (budgetDay >=600 && budgetDay < 1200 ) {
+    console.log('У вас средний уровень дохода!'); 
+}else if (budgetDay >= 0 && budgetDay < 600) {
+    console.log('К сожалению у вас уровень дохода ниже среднего!'); 
 }else if (budgetDay < 0) {
     console.log('Что то пошло не так');
 }
