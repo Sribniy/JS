@@ -1,7 +1,7 @@
 let mission = 1000;
 let income = 'Фриланс'
 let money = prompt('Ваш месячный доход?');
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'Хлеб, вода, мука');
 let deposit = confirm ('Есть ли у вас депозит в банке?');
 let expenses1 = prompt( 'Введите обязательную статью расходов?');
 let amount1 = prompt ('Во сколько это обойдется?');
@@ -9,7 +9,7 @@ let expenses2 = prompt( 'Введите обязательную статью р
 let amount2 = prompt ('Во сколько это обойдется?');
 let budgetMonth = money - (Number(amount1) + Number(amount2));
 let tar = parseInt(mission / budgetMonth);
-let budgetDay = Math.ceil(budgetMonth / 30);
+let budgetDay = Math.floor(budgetMonth / 30);
 
 
 console.log(typeof money);
