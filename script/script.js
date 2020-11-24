@@ -22,7 +22,7 @@ console.log(expenses1);
 console.log(expenses2);
 console.log(amount1);
 console.log(amount2);
-console.log(budgetMonth);
+console.log('Бюджет на месяц  '+ budgetMonth);
 console.log('Ваша цель будет достигнута через: ' + tar + ' месяцев');
 console.log(budgetDay);
 console.log(addExpenses.length);
