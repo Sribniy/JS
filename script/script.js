@@ -18,6 +18,7 @@ showTypeof(income);
 showTypeof(deposit);
 
 
+console.log(addExpenses.toLowerCase().split(','));
 
 let getExpensesMonth = function (){
     return +amount1 + +amount2;
@@ -37,7 +38,21 @@ let getTargetMonth = function (){
 };
 console.log ('Цель буде достигнута за ' + getTargetMonth() + ' месяца');
 
+let budgetDay = Math.floor(accumulatedMonth / 30);
+console.log('Ваш дневной бюджет ' + budgetDay);
 
+let getStatusIncome = function(){   
+if (budgetDay >=1200){
+    return('У вас высокий уровень дохода!');
+}else if (budgetDay >=600 && budgetDay < 1200 ) {
+    return('У вас средний уровень дохода!'); 
+}else if (budgetDay >= 0 && budgetDay < 600) {
+    return('К сожалению у вас уровень дохода ниже среднего!'); 
+}else if (budgetDay < 0) {
+    return('Что то пошло не так');
+}   
+};
+console.log(getStatusIncome());
 
  /*let getAccumulatedMonth = 0;
  const sum1 = function(a, b) {
@@ -92,14 +107,6 @@ console.log(addExpenses.length);
 console.log('Ваш бюджет на день ' + budgetDay + ' рублей');
 
 
-if (budgetDay >=1200){
-    console.log('У вас высокий уровень дохода!');
-}else if (budgetDay >=600 && budgetDay < 1200 ) {
-    console.log('У вас средний уровень дохода!'); 
-}else if (budgetDay >= 0 && budgetDay < 600) {
-    console.log('К сожалению у вас уровень дохода ниже среднего!'); 
-}else if (budgetDay < 0) {
-    console.log('Что то пошло не так');
-}
+
 
 */
