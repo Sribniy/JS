@@ -1,24 +1,12 @@
-let amount1 = prompt('   adfdsdf', 23);
-let amount2 = prompt('   adfdsdf', 23);
-
-let getExpensesMonth = function (){
-    return amount1 + amount2;
-};
-console.log ('Расходы за месяц ' + getExpensesMonth());
-console.log(typeof amount1);
-console.log(typeof amount2);
-
-
-
-/*let mission = 1000;
+let mission = 1000;
 let income = 'Фриланс';
 let money = prompt('Ваш месячный доход?', '1000');
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', 'Хлеб, вода, мука');
 let deposit = confirm ('Есть ли у вас депозит в банке?');
 let expenses1 = prompt( 'Введите обязательную статью расходов?', 'Кино');
-let amount1 = prompt ('Во сколько это обойдется?');
+let amount1 = prompt ('Во сколько это обойдется?', 50);
 let expenses2 = prompt( 'Введите обязательную статью расходов?', 'Вино');
-let amount2 = prompt ('Во сколько это обойдется?');
+let amount2 = prompt ('Во сколько это обойдется?', 50);
 
 
 let showTypeof = function(item){
@@ -30,10 +18,25 @@ showTypeof(income);
 showTypeof(deposit);
 
 
+
 let getExpensesMonth = function (){
-    return amount1 + amount2;
+    return +amount1 + +amount2;
 };
 console.log ('Расходы за месяц ' + getExpensesMonth());
+
+
+let getAccumulatedMonth = function (){
+    return money - getExpensesMonth();
+};
+console.log ('Накопления за месяц  ' + getAccumulatedMonth());
+
+let accumulatedMonth = getAccumulatedMonth();
+
+let getTargetMonth = function (){
+    return money / accumulatedMonth;
+};
+console.log ('Цель буде достигнута за ' + getTargetMonth() + ' месяца');
+
 
 
  /*let getAccumulatedMonth = 0;
