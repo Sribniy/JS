@@ -1,3 +1,4 @@
+  
 let mission = 1000;
 let income = 'Фриланс';
 let money = prompt('Ваш месячный доход?', '1000');
@@ -20,21 +21,20 @@ showTypeof(deposit);
 
 console.log(addExpenses.toLowerCase().split(','));
 
-let getExpensesMonth = function (){
-    return +amount1 + +amount2;
-};
-console.log ('Расходы за месяц ' + getExpensesMonth());
+let getExpensesMonth = function (a, b){
+    return +a + +b;
+}(amount1, amount2);
+console.log("Расходы за месяц " + getExpensesMonth);
 
-
-let getAccumulatedMonth = function (){
-    return money - getExpensesMonth();
-};
-console.log ('Накопления за месяц  ' + getAccumulatedMonth());
-
-let accumulatedMonth = getAccumulatedMonth();
+let getAccumulatedMonth = function (a, b){
+    return a - b;
+}(money, getExpensesMonth);
+console.log('Накопления за месяц  ' + getAccumulatedMonth);
+ 
+let accumulatedMonth = getAccumulatedMonth;
 
 let getTargetMonth = function (){
-    return money / accumulatedMonth;
+    return Math.ceil(money / accumulatedMonth);
 };
 console.log ('Цель буде достигнута за ' + getTargetMonth() + ' месяца');
 
@@ -53,60 +53,3 @@ if (budgetDay >=1200){
 }   
 };
 console.log(getStatusIncome());
-
- /*let getAccumulatedMonth = 0;
- const sum1 = function(a, b) {
-    getAccumulatedMonth = Number (a) -  Number (b);
- };
- sum1(money, getExpensesMonth);
-  console.log('Накопления за месяц (Доходы минус расходы) ' + getAccumulatedMonth);
-
-let accumulatedMonth = getAccumulatedMonth;
-
-let getTargetMonth = 0;
-const sum3 = function(a, b) {
-    getTargetMonth = Math.floor(a / b);
-};
-sum3(mission, accumulatedMonth);
- console.log('Цель будет достигнути через ' + getTargetMonth + ' месяца');
-
- let budgetDay = Math.floor(accumulatedMonth / 30);
- 
-console.log(addExpenses);
-
-console.log(budgetDay);*/
-/*;
-
-let deposit = false;
-let addExpenses = 'Интернет, такси, коммуналка';
-let period = 9;
-let budgetDay ;*/
-
-
-/*console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
-console.log(addExpenses.length);
-console.log('Период равен ' + period + ' месяцев');
-console.log('Цель заработать ' + mission + ' рублей');
-console.log(addExpenses.toLowerCase().split(', '));
-console.log(budgetDay);*/
-
-/*console.log(typeof money);
-console.log(typeof income);
-console.log(deposit);
-console.log(money);
-console.log(addExpenses);
-
-console.log(expenses1);
-console.log(expenses2);
-console.log(amount1);
-console.log(amount2);
-console.log('Ваша цель будет достигнута через: ' + tar + ' месяцев');
-console.log(addExpenses.length);
-console.log('Ваш бюджет на день ' + budgetDay + ' рублей');
-
-
-
-
-*/
